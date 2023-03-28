@@ -45,7 +45,6 @@ After you're finished please remove all the comments and instructions!
     - [Connect to your PostgreSQL server with psql](#connect-to-your-postgresql-server-with-psql)
     - [Create the database](#create-the-database)
     - [Connect to the database](#connect-to-the-database)
-  - [ Screenshots ](#-screenshots-)
   - [📄 Schema ](#-schema-)
   - [👥 Authors ](#-authors-)
   - [🤝 Contributing ](#-contributing-)
@@ -129,12 +128,6 @@ Example commands:
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Screenshots <a name="screenshots"></a>
-
-![1](https://user-images.githubusercontent.com/87012757/213214371-f84eab9f-bb04-4bea-bed5-e1000ece6c38.png)
-![2](https://user-images.githubusercontent.com/87012757/213214386-794a2139-31f9-4b41-af09-e651e547fff9.png)
-
 
 ### Schema <a name="schema"></a>
 N/A
