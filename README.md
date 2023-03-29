@@ -1,158 +1,110 @@
-<a name="readme-top"></a>
-
-<div align="center">
-
-  <img src="./murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-
-</div>
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Schema
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 Vet Clinic Database ](#-vet-clinic-database-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Connect to your PostgreSQL server with psql](#connect-to-your-postgresql-server-with-psql)
-    - [Create the database](#create-the-database)
-    - [Connect to the database](#connect-to-the-database)
-  - [ Screenshots ](#-screenshots-)
-  - [📄 Schema ](#-schema-)
-  - [👥 Authors ](#-authors-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
-
-<!-- PROJECT DESCRIPTION -->
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Create database](#create-database)
+- [👥 Author](#author)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
 # 📖 Vet Clinic Database <a name="about-project"></a>
 
-**Vet Clinic Database** is a Relational database to create the data structure for a vet clinic
+**Vet Clinic Database** is a project to create the initial data structure for a veterinary clinic using a relational database. It implements PostgreSQL and contains all the data about animals.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>Database</summary>
+  <summary>Client</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-- **CREATE DATABASE**
-- **INSERT ANIMALS**
-- **QUERY ANIMALS**
-- **ALTER TABLES**
-- **TRANSACTIONS**
+- Create a database to store animals' information
+- Insert some data into table, and query it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-- PostgreSQL server installed and running
-- psql installed
+- [PostgreSQL server](https://www.postgresql.org/download/) installed and running
+- [psql](https://www.postgresql.org/docs/current/app-psql.html) installed
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-Example commands:
-
 ```
-  git clone https://github.com/normainobary2021/vet-clinic-3.git
-  cd vet-clinic-3
+git clone https://github.com/normainobary2021/vet-clinic-3.git
+cd vet-clinic-3
 ```
 
-### Connect to your PostgreSQL server with psql
-    
+### Create database
+
+1. Connect to your PostgreSQL server with `psql`
 ```
-  psql
+> psql
+postgres=#
 ```
 
-### Create the database
+2. Create the database `vet_clinic`
+```
+postgres=# CREATE DATABASE vet_clinic;
+CREATE DATABASE
+```
 
+3. Connect to your database vet_clinic. Inside your current session do:
 ```
-  CREATE DATABASE vet_clinic;
+postgres=# \c vet_clinic
+You are now connected to database "vet_clinic" as user "postgres".
+vet_clinic=#
 ```
 
-### Connect to the database
-
-```
-  \c vet_clinic
-```
+That's it! Congratulations, you have created your database and connected to it. Next, we will add a table.
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Screenshots <a name="screenshots"></a>
+<!-- ## Database Schema Diagram
+![Schema Diagram soom](./img/schema.png) -->
 
-![1](https://user-images.githubusercontent.com/87012757/213214371-f84eab9f-bb04-4bea-bed5-e1000ece6c38.png)
-![2](https://user-images.githubusercontent.com/87012757/213214386-794a2139-31f9-4b41-af09-e651e547fff9.png)
-
-
-### Schema <a name="schema"></a>
-N/A
-
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **Norman Ainobushoborozi**
 
 - GitHub: [@normainobary2021](https://github.com/normainobary2021)
 - Twitter: [@NormanAinobush2](https://twitter.com/NormanAinobush2)
-- LinkedIn: [@norman-ainobushoborozi](https://www.linkedin.com/in/norman-ainobushoborozi/)
+- LinkedIn: [norman-ainobushoborozi](https://www.linkedin.com/in/norman-ainobushoborozi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+## 🔭 Future Features <a name="future-features"></a>
+
+- Insert new data
+- Update and Delete existing data
+- Create a Front End to consume the data
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -162,28 +114,21 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, please give it a ⭐️!
+Give a start if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- N/A
+- I would like to thank the Microverse Program Team!
+- I would like to thank anyone whose code was used and my partners in the program!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
-
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
